@@ -1,6 +1,5 @@
 from langdetect import detect, DetectorFactory
 
-# Asegurar que los resultados de la detección sean consistentes
 DetectorFactory.seed = 0
 
 def cesar_deszifratu(testua, desplazamendua):
@@ -27,7 +26,6 @@ def indar_eraso_cesar(zifratutako_testua):
         # Hizkuntza autodetektatzen saiatu
         try:
             hizkuntza = detect(proba_testua)
-            # 'es' gaztelania bada, gako zuzena aurkitu dugu
             if hizkuntza == 'es':
                 print(f"¡Gakoa aurkitu da! -> Desplazamendua: {gakoa}")
                 print(f"Mezu deszifratua: {proba_testua}")
